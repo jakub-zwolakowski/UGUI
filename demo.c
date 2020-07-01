@@ -24,9 +24,5 @@ int main(void)
   UG_ConsoleSetForecolor(C_GREEN);
   UG_ConsolePutString("System Initialization Complete\n");
 
-  while (1 == 1) {
-    // Do stuff here I guess?
-  }
-
   return 0;
 }
