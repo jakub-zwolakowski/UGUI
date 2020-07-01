@@ -1,4 +1,4 @@
-#include "stm32_BSP.h   // Or whatever else you need to include for your BSP/processor
+#include "stm32_BSP.h"   // Or whatever else you need to include for your BSP/processor
 #include "ugui.h"
 
 void UserSetPixel (UG_S16 x, UG_S16 y, UG_COLOR c) {
