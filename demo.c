@@ -29,3 +29,38 @@ int main(void)
 
   return 0;
 }
+
+int main2(void)
+{
+  /* Configure uGUI */
+  UG_GUI g;
+  UG_Init(&g, UserSetPixel , 480, 272);
+
+  /* Draw text with uGUI */
+  UG_ConsoleSetArea(0, 60, 480, 212);
+  UG_ConsoleSetBackcolor(C_BLACK);
+  UG_ConsoleSetForecolor(C_RED);
+  UG_ConsolePutString("Beginning System Initialization...\n");
+  UG_ConsoleSetForecolor(C_GREEN);
+  UG_ConsolePutString("System Initialization Complete\n");
+
+  return 0;
+}
+
+int main3(void)
+{
+  /* Configure uGUI */
+  UG_GUI g;
+  UG_Init(&g, UserSetPixel , 480, 272);
+
+  /* Draw text with uGUI */
+  UG_FontSelect(&FONT_8X14);
+  UG_ConsoleSetForecolor(C_RED);
+  UG_ConsolePutString("Beginning System Initialization...\n");
+  UG_ConsoleSetForecolor(C_GREEN);
+  UG_ConsoleSetBackcolor(C_BLACK);
+  UG_ConsoleSetArea(0, 60, 480, 212);
+  UG_ConsolePutString("System Initialization Complete\n");
+
+  return 0;
+}
