@@ -1,6 +1,6 @@
 //#include "stm32_BSP.h"   // Or whatever else you need to include for your BSP/processor
 #include "ugui.h"
-#include "stdint.h"
+#include "stdio.h"
 
 void UserSetPixel (UG_S16 x, UG_S16 y, UG_COLOR c) {
   /*
@@ -9,6 +9,7 @@ void UserSetPixel (UG_S16 x, UG_S16 y, UG_COLOR c) {
    * the "0xFF000000 |" part, it's just a way to fix uGUI not currently supporting the alpha channel.
    */
   // BSP_LCD_DrawPixel(x, y, 0xFF000000 | c);
+  printf("%d %d %d\n", x, y, c);
 }
 
 int main(void)
