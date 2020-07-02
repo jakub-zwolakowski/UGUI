@@ -1,5 +1,6 @@
 //#include "stm32_BSP.h"   // Or whatever else you need to include for your BSP/processor
 #include "ugui.h"
+#include "stdint.h"
 
 void UserSetPixel (UG_S16 x, UG_S16 y, UG_COLOR c) {
   /*
@@ -7,13 +8,14 @@ void UserSetPixel (UG_S16 x, UG_S16 y, UG_COLOR c) {
    * you're using STM32Cube's BSP for the STM32F7 Disco Board. If not, you can remove
    * the "0xFF000000 |" part, it's just a way to fix uGUI not currently supporting the alpha channel.
    */
-  BSP_LCD_DrawPixel(x, y, 0xFF000000 | c);
+  // BSP_LCD_DrawPixel(x, y, 0xFF000000 | c);
 }
 
 int main(void)
 {
   /* Configure uGUI */
-  UG_Init(&gui, UserSetPixel , 480, 272);
+  UG_GUI g;
+  UG_Init(&g, UserSetPixel , 480, 272);
 
   /* Draw text with uGUI */
   UG_FontSelect(&FONT_8X14);
